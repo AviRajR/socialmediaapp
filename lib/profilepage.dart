@@ -14,11 +14,11 @@ class ProfilePage extends StatelessWidget {
           children: [
             CircleAvatar(
               radius: 50.0,
-              backgroundImage: AssetImage('assets/profile_image.jpg'),
+              backgroundImage: AssetImage('assets/images/profilephoto.png'),
             ),
             SizedBox(height: 20.0),
             Text(
-              'John Doe',
+              'Avirajsinh Raj',
               style: TextStyle(
                 fontSize: 24.0,
                 fontWeight: FontWeight.bold,
@@ -35,11 +35,11 @@ class ProfilePage extends StatelessWidget {
             SizedBox(height: 20.0),
             ListTile(
               leading: Icon(Icons.email),
-              title: Text('john.doe@example.com'),
+              title: Text('avirajsinhraj.com'),
             ),
             ListTile(
               leading: Icon(Icons.phone),
-              title: Text('+1 123 456 7890'),
+              title: Text('+91 1234567890'),
             ),
           ],
         ),

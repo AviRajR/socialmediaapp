@@ -143,25 +143,23 @@ class LoginPage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(50),
                         color: Colors.orange),
                     child: ElevatedButton(
-                      onPressed: () async {
-                        User? user =
-                            await authService.signInWithEmailAndPassword(
-                          'user1@example.com',
-                          'password1',
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => HomePage()),
                         );
-
-                        if (user != null) {
-                          // Authentication successful, navigate to the home screen or perform other actions.
-                          print('Authentication successful: ${user.email}');
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (BuildContext context) =>
-                                      HomePage()));
-                        } else {
-                          // Authentication failed, show an error message or perform other actions.
-                          print('Authentication failed');
-                        }
+                        // if (user != null) {
+                        //   // Authentication successful, navigate to the home screen or perform other actions.
+                        //   print('Authentication successful: ${user.email}');
+                        //   Navigator.push(
+                        //       context,
+                        //       MaterialPageRoute(
+                        //           builder: (BuildContext context) =>
+                        //               HomePage()));
+                        // } else {
+                        //   // Authentication failed, show an error message or perform other actions.
+                        //   print('Authentication failed');
+                        // }
                       },
                       child: Text(
                         "Login",

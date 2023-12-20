@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'profilepage.dart';
 
 class Post {
   String username;
@@ -86,6 +87,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   color: _currentIndex == 1 ? Colors.white : Colors.grey),
               onPressed: () {
                 _onTabTapped(1);
+                // Navigate to the profile page
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ProfilePage()),
+                );
               },
             ),
           ],
